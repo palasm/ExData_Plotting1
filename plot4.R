@@ -27,10 +27,11 @@ convertedSubMetering3  <- as.numeric(subSetData0102$Sub_metering_3)
 
 ## Ploting and Saving to file in plot4.png
 
-## Plotting the graph using plot function
-
+## Saving to file in plot4.png
 png("plot4.png", width=480, height=480) 
 par(mfrow = c(2, 2))  
+
+## Plotting the graph using plot function
 
 #1-1  Global Active Power Plot 
 plot(convertedDateTime, convertedGlobalActivePower, type = "l", xlab = "", ylab = "Global Active Power", cex = 0.2) 
