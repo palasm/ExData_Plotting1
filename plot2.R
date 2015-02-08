@@ -9,7 +9,7 @@ rm(completeDataSet)
 
 
 #Converting Date & Time using strptime function  
-convertedDateTime <- strptime(paste(subSetData0102$Date, subSetData0102$Time, sep=" "), "%d/%m/%Y %H:%M:%S")  
+convertedDateTime <- strptime(paste(subSetData0102$Date, subSetData0102$Time, sep = " "), "%d/%m/%Y %H:%M:%S")  
 
 #Converting Global_Active_Power using as.numeric function  
 convertedGlobalActivePower <- as.numeric(subSetData0102$Global_active_power)
@@ -18,7 +18,7 @@ convertedGlobalActivePower <- as.numeric(subSetData0102$Global_active_power)
 ## Ploting and Saving to file in plot2.png
 
 ## Plotting the graph using plot function 
-plot(convertedDateTime, convertedGlobalActivePower, type="l", xlab="", ylab="Global Active Power (kilowatts)") 
+plot(convertedDateTime, convertedGlobalActivePower, type = "l", xlab = "", ylab = "Global Active Power (kilowatts)") 
 
 ## Save plot in plot2.png
 dev.copy(png, file = "plot2.png", height = 480, width = 480)
