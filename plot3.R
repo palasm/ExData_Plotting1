@@ -21,11 +21,10 @@ convertedSubMetering3  <- as.numeric(subSetData0102$Sub_metering_3)
  
 ## Ploting and Saving to file in plot3.png
 
-## Plotting the graph using plot function 
-
 ## Saving to file
 png("plot3.png", width = 480, height = 480)
 
+## Plotting the graph using plot function 
 plot(convertedDateTime, convertedSubMetering1, type = "l", ylab = "Energy Sub metering", xlab = "") 
 lines(convertedDateTime, convertedSubMetering2, type = "l", col = "red") 
 lines(convertedDateTime, convertedSubMetering3, type = "l", col = "blue") 
