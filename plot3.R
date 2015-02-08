@@ -9,7 +9,7 @@ rm(completeDataSet)
 
 
 #Converting Date & Time using strptime function  
-convertedDateTime <- strptime(paste(subSetData0102$Date, subSetData0102$Time, sep=" "), "%d/%m/%Y %H:%M:%S")  
+convertedDateTime <- strptime(paste(subSetData0102$Date, subSetData0102$Time, sep = " "), "%d/%m/%Y %H:%M:%S")  
 
 #Converting Global_Active_Power using as.numeric function  
 convertedGlobalActivePower <- as.numeric(subSetData0102$Global_active_power)
@@ -24,11 +24,11 @@ convertedSubMetering3  <- as.numeric(subSetData0102$Sub_metering_3)
 ## Plotting the graph using plot function 
 
 ## Saving to file
-png("plot3.png", width=480, height=480)
+png("plot3.png", width = 480, height = 480)
 
-plot(convertedDateTime, convertedSubMetering1, type="l", ylab="Energy Sub metering", xlab="") 
-lines(convertedDateTime, convertedSubMetering2, type="l", col="red") 
-lines(convertedDateTime, convertedSubMetering3, type="l", col="blue") 
-legend("topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lty=1, lwd=2, col=c("black", "red", "blue")) 
+plot(convertedDateTime, convertedSubMetering1, type = "l", ylab = "Energy Sub metering", xlab = "") 
+lines(convertedDateTime, convertedSubMetering2, type = "l", col = "red") 
+lines(convertedDateTime, convertedSubMetering3, type = "l", col = "blue") 
+legend("topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lty = 1, lwd = 2, col = c("black", "red", "blue")) 
 
 dev.off()
