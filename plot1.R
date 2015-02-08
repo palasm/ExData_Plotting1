@@ -14,7 +14,7 @@ convertedGlobalActivePower <- as.numeric(subSetData0102$Global_active_power)
 ## Ploting and saving to file in plot1.png with width=480, height=480
 
 ## Plot & check in display first to debug
-hist(convertedGlobalActivePower, col="red", main="Global Active Power", xlab="Global Active Power (kilowatts)") 
+hist(convertedGlobalActivePower, col = "red", main = "Global Active Power", xlab = "Global Active Power (kilowatts)") 
 
 ## Save plot in plot1.png
 dev.copy(png, file = "plot1.png", height = 480, width = 480) 
